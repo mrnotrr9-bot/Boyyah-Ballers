@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booyah Ballers FC | Official Website</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome 6 Pro Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Premium Fonts: Montserrat (Modern Condensed Headers) & Inter (UI Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            rm: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            rmBlack: '#0A0A0C',
+            rmCard: '#121318',
+            rmCardHover: '#1A1C23',
+            rmGold: '#D4AF37',
+            rmGoldLight: '#F3E5AB',
+            rmSilver: '#C0C0C0',
+            rmBorder: '#232630',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0A0C;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .font-rm {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gold Metallic Gradients */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF 20%, #D4AF37 70%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.08);
+    }
+
+    .gold-border-glow:hover {
+      border-color: rgba(212, 175, 55, 0.7);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+    }
+
+    /* Glassmorphism Header */
+    .rm-navbar {
+      background: rgba(10, 10, 12, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid #1f222b;
+    }
+
+    /* Player Card Real Madrid Hover Effect */
+    .rm-player-card {
+      background: linear-gradient(180deg, #161820 0%, #0d0e12 100%);
+      border: 1px solid #232630;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .rm-player-card:hover {
+      transform: translateY(-8px);
+      border-color: #D4AF37;
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+
+    .rm-player-card:hover .jersey-svg-container {
+      transform: scale(1.06);
+    }
+
+    .jersey-svg-container {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Filter Pill Active State */
+    .filter-tab {
+      transition: all 0.2s ease;
+    }
+    .filter-tab.active {
+      background-color: #FFFFFF;
+      color: #000000;
+      font-weight: 800;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232630;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-yellow-500 selection:text-black">
+
+  <!-- TOP OFFICIAL STATUS BAR -->
+  <div class="bg-black border-b border-zinc-900 text-[11px] font-semibold text-zinc-400 py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="flex items-center space-x-1.5 text-zinc-300">
+          <i class="fa-solid fa-circle-check text-yellow-500 text-[10px]"></i>
+          <span class="font-rm tracking-wider uppercase">OFFICIAL WEBSITE OF BOOYAH BALLERS FC</span>
+        </span>
+        <span class="hidden md:inline text-zinc-700">|</span>
+        <span class="hidden md:inline font-rm tracking-wider text-zinc-400 uppercase">PREMIER CHAMPIONSHIP DE BNMPC</span>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" rel="noopener" class="hover:text-white transition-colors flex items-center space-x-1.5">
+          <i class="fa-brands fa-instagram text-yellow-500"></i>
+          <span class="font-rm font-bold uppercase tracking-wider text-[10px]">@boyyah_ballers_2024</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="rm-navbar sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo & Official Title -->
+      <a href="#" class="flex items-center space-x-3.5 group">
+        <img src="input_file_0.png" alt="Booyah Ballers Crest" class="h-14 w-14 object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-2">
+            <span class="font-rm font-black text-xl sm:text-2xl tracking-tight text-white uppercase leading-none">BOOYAH BALLERS</span>
+            <span class="text-xs font-rm font-extrabold text-yellow-500 italic">FC</span>
+          </div>
+          <span class="text-[10px] font-rm font-bold text-zinc-400 tracking-widest uppercase pt-0.5">BNMPC PREMIER DIVISION</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="#hero" class="text-xs font-rm font-bold tracking-widest text-zinc-300 hover:text-white transition-colors uppercase py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">HOME</a>
+        <a href="#next-match" class="text-xs font-rm font-bold tracking-widest text-zinc-300 hover:text-white transition-colors uppercase py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">MATCH CENTER</a>
+        <a href="#squad" class="text-xs font-rm font-bold tracking-widest text-zinc-300 hover:text-white transition-colors uppercase py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">FIRST TEAM</a>
+        <a href="#trophies" class="text-xs font-rm font-bold tracking-widest text-zinc-300 hover:text-white transition-colors uppercase py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">HONOURS</a>
+        <a href="#stadium" class="text-xs font-rm font-bold tracking-widest text-zinc-300 hover:text-white transition-colors uppercase py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">STADIUM</a>
+      </nav>
+
+      <!-- Right Action & Mobile Toggle -->
+      <div class="flex items-center space-x-4">
+        <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-5 py-2.5 rounded-none font-rm font-black text-xs tracking-wider uppercase hover:brightness-110 transition-all shadow-lg clip-path-slant">
+          <i class="fa-brands fa-instagram text-sm"></i>
+          <span>OFFICIAL INSTAGRAM</span>
+        </a>
+
+        <button id="mobile-menu-btn" aria-label="Toggle Navigation" class="lg:hidden text-white text-2xl focus:outline-none p-2 rounded-md border border-zinc-800 bg-zinc-900">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-6 space-y-4">
+      <a href="#hero" class="mobile-nav-link block text-sm font-rm font-bold tracking-widest uppercase py-2 border-b border-zinc-900 text-zinc-300 hover:text-white">HOME</a>
+      <a href="#next-match" class="mobile-nav-link block text-sm font-rm font-bold tracking-widest uppercase py-2 border-b border-zinc-900 text-zinc-300 hover:text-white">MATCH CENTER</a>
+      <a href="#squad" class="mobile-nav-link block text-sm font-rm font-bold tracking-widest uppercase py-2 border-b border-zinc-900 text-zinc-300 hover:text-white">FIRST TEAM SQUAD</a>
+      <a href="#trophies" class="mobile-nav-link block text-sm font-rm font-bold tracking-widest uppercase py-2 border-b border-zinc-900 text-zinc-300 hover:text-white">TROPHY CABINET</a>
+      <a href="#stadium" class="mobile-nav-link block text-sm font-rm font-bold tracking-widest uppercase py-2 text-zinc-300 hover:text-white">HOME GROUND (BGB)</a>
+      <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" rel="noopener" class="flex items-center justify-center space-x-2 bg-yellow-500 text-black w-full py-3 font-rm font-black text-xs tracking-wider uppercase mt-4">
+        <i class="fa-brands fa-instagram text-base"></i>
+        <span>FOLLOW @BOYYAH_BALLERS_2024</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO CAROUSEL BANNER SECTION -->
+  <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10">
+    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 min-h-[460px] sm:min-h-[540px] flex items-end p-6 sm:p-12 shadow-2xl group">
+      <!-- Dark Overlay Image -->
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(10,10,12,0.98) 10%, rgba(10,10,12,0.6) 50%, rgba(10,10,12,0.3) 100%), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1800&q=80');"></div>
+      
+      <!-- Content Overlay -->
+      <div class="relative z-10 w-full flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div class="space-y-4 max-w-2xl">
+          <div class="inline-flex items-center space-x-2.5 bg-black/80 border border-yellow-500/40 px-3.5 py-1.5 rounded-full text-xs font-rm font-extrabold text-yellow-400 uppercase tracking-widest shadow-lg">
+            <span class="w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
+            <span>CHAMPIONS OF BNMPC • EST. 2024</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-black font-rm uppercase tracking-tight leading-none text-white drop-shadow-lg">
+            THE KINGS OF <br> <span class="gold-gradient-text">BNMPC FOOTBALL</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-zinc-300 font-medium max-w-xl">
+            Welcome to the official digital hub of Booyah Ballers FC. Inaugural Champions of December 2, 2025. Preparing for the Grand Final on December 6, 2026.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#next-match" class="bg-white text-black font-rm font-black text-xs px-6 py-3.5 uppercase tracking-wider hover:bg-yellow-500 transition-colors shadow-lg">
+              MATCH CENTER
+            </a>
+            <a href="#squad" class="bg-zinc-900/90 text-white border border-zinc-700 font-rm font-black text-xs px-6 py-3.5 uppercase tracking-wider hover:border-yellow-500 transition-colors">
+              VIEW SQUAD
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Hero Match Teaser Widget -->
+        <div class="bg-black/90 backdrop-blur border border-zinc-800 rounded-xl p-5 w-full md:w-72 shrink-0 space-y-3 shadow-2xl">
+          <div class="flex items-center justify-between text-[10px] font-rm font-extrabold text-zinc-400 uppercase tracking-widest border-b border-zinc-800 pb-2">
+            <span>NEXT MATCH</span>
+            <span class="text-yellow-500">FINAL</span>
+          </div>
+          <div class="flex items-center justify-between text-center">
+            <div>
+              <p class="font-rm font-black text-sm text-white">FIESTA FC</p>
+              <span class="text-[9px] font-bold text-zinc-500 uppercase">OPPONENT</span>
+            </div>
+            <span class="font-rm font-black text-xs text-yellow-500 px-2">VS</span>
+            <div>
+              <p class="font-rm font-black text-sm text-white">BOOYAH</p>
+              <span class="text-[9px] font-bold text-zinc-500 uppercase">BALLERS</span>
+            </div>
+          </div>
+          <div class="text-[10px] font-rm font-bold text-zinc-300 text-center uppercase tracking-wider pt-1 border-t border-zinc-900">
+            <i class="fa-regular fa-calendar-days text-yellow-500 mr-1"></i> DEC 6, 2026 • BGB GROUND
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTAINER GRID -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex-grow w-full space-y-16">
+    
+    <!-- NEXT MATCH CENTER (REAL MADRID STYLE MATCH MODULE) -->
+    <section id="next-match" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-zinc-800 pb-3">
+        <div class="flex items-center space-x-3">
+          <div class="w-2.5 h-7 bg-yellow-500"></div>
+          <h2 class="text-2xl sm:text-3xl font-black font-rm uppercase tracking-wider text-white">NEXT MATCH CENTER</h2>
+        </div>
+        <span class="text-xs font-rm font-bold uppercase text-zinc-400 tracking-widest">PREMIER CHAMPIONSHIP DE BNMPC</span>
+      </div>
+
+      <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Team Logos & Matchup (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="flex items-center justify-between bg-black/60 border border-zinc-800/80 p-6 rounded-xl">
+              
+              <!-- Opponent: Fiesta FC -->
+              <div class="flex flex-col items-center text-center space-y-2 flex-1">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center font-rm font-black text-xl text-zinc-400">
+                  FFC
+                </div>
+                <h3 class="font-rm font-black text-lg sm:text-xl text-white uppercase tracking-wider">FIESTA FC</h3>
+                <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">FINALIST</span>
+              </div>
+
+              <!-- VS Badge -->
+              <div class="px-4 text-center">
+                <span class="inline-block font-rm font-black text-xl text-yellow-500 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">VS</span>
+                <span class="block text-[10px] font-rm font-extrabold text-zinc-400 uppercase tracking-widest pt-2">BNMPC FINAL</span>
+              </div>
+
+              <!-- Booyah Ballers FC -->
+              <div class="flex flex-col items-center text-center space-y-2 flex-1">
+                <img src="input_file_0.png" alt="Booyah Ballers Logo" class="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-md">
+                <h3 class="font-rm font-black text-lg sm:text-xl text-white uppercase tracking-wider">BOOYAH BALLERS</h3>
+                <span class="text-[10px] font-bold text-yellow-500 uppercase tracking-widest">EST. 2024</span>
+              </div>
+
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between text-xs font-rm font-bold text-zinc-300 gap-4 bg-zinc-900/80 p-4 rounded-xl border border-zinc-800">
+              <span class="flex items-center space-x-2">
+                <i class="fa-solid fa-location-dot text-yellow-500"></i>
+                <span class="uppercase">VENUE: BGB GROUND</span>
+              </span>
+              <span class="flex items-center space-x-2">
+                <i class="fa-regular fa-clock text-yellow-500"></i>
+                <span class="uppercase">6TH DECEMBER 2026</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Interactive Live Countdown Widget (5 Cols) -->
+          <div class="lg:col-span-5 bg-black border border-zinc-800 rounded-xl p-6 space-y-4 text-center">
+            <span class="text-xs font-rm font-extrabold text-yellow-500 tracking-widest uppercase">KICKOFF COUNTDOWN</span>
+            
+            <div class="grid grid-cols-4 gap-2" id="countdown-timer">
+              <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800">
+                <span id="days" class="text-2xl sm:text-3xl font-black font-rm text-white block">--</span>
+                <span class="text-[9px] text-zinc-500 font-bold uppercase">DAYS</span>
+              </div>
+              <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800">
+                <span id="hours" class="text-2xl sm:text-3xl font-black font-rm text-white block">--</span>
+                <span class="text-[9px] text-zinc-500 font-bold uppercase">HOURS</span>
+              </div>
+              <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800">
+                <span id="minutes" class="text-2xl sm:text-3xl font-black font-rm text-white block">--</span>
+                <span class="text-[9px] text-zinc-500 font-bold uppercase">MINS</span>
+              </div>
+              <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800">
+                <span id="seconds" class="text-2xl sm:text-3xl font-black font-rm text-white block">--</span>
+                <span class="text-[9px] text-zinc-500 font-bold uppercase">SECS</span>
+              </div>
+            </div>
+
+            <button onclick="alert('Match Alert Set! We will remind you before kickoff on December 6, 2026.')" class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-rm font-black text-xs py-3 uppercase tracking-wider transition-colors shadow">
+              SET MATCH REMINDER
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FIRST TEAM SQUAD SECTION -->
+    <section id="squad" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800 pb-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-2.5 h-7 bg-yellow-500"></div>
+          <div>
+            <span class="text-xs font-rm font-bold tracking-widest text-zinc-400 uppercase">SEASON 2024–2026</span>
+            <h2 class="text-3xl sm:text-4xl font-black font-rm uppercase tracking-wider text-white">FIRST TEAM SQUAD</h2>
+          </div>
+        </div>
+
+        <!-- Position Category Filter Tabs -->
+        <div class="flex flex-wrap gap-2" id="filter-container">
+          <button data-filter="all" class="filter-tab active px-4 py-2 text-xs font-rm font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300">ALL (16)</button>
+          <button data-filter="gk" class="filter-tab px-4 py-2 text-xs font-rm font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300">GOALKEEPER</button>
+          <button data-filter="def" class="filter-tab px-4 py-2 text-xs font-rm font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300">DEFENDERS</button>
+          <button data-filter="mid" class="filter-tab px-4 py-2 text-xs font-rm font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300">MIDFIELDERS</button>
+          <button data-filter="att" class="filter-tab px-4 py-2 text-xs font-rm font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300">FORWARDS</button>
+        </div>
+      </div>
+
+      <!-- Real Madrid Style Player Cards Grid -->
+      <div id="squad-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-5">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- TROPHY CABINET & HONOURS -->
+    <section id="trophies" class="space-y-6">
+      <div class="flex items-center space-x-3 border-b border-zinc-800 pb-3">
+        <div class="w-2.5 h-7 bg-yellow-500"></div>
+        <h2 class="text-3xl font-black font-rm uppercase tracking-wider text-white">TROPHY CABINET & HONOURS</h2>
+      </div>
+
+      <div class="bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border border-yellow-500/40 rounded-2xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8 gold-border-glow relative overflow-hidden">
+        <div class="flex items-center space-x-6 z-10">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 bg-black border border-yellow-500/60 rounded-2xl flex items-center justify-center text-yellow-500 text-4xl sm:text-5xl shrink-0 shadow-2xl">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="space-y-1">
+            <span class="text-xs font-rm font-extrabold text-yellow-500 tracking-widest uppercase">INAUGURAL CHAMPIONS</span>
+            <h3 class="text-3xl sm:text-4xl font-black font-rm uppercase tracking-tight text-white">CHAMPIONSHIP WINNER</h3>
+            <p class="text-sm font-rm font-bold text-zinc-400 uppercase tracking-wider">DECEMBER 2, 2025 • PREMIER CHAMPIONSHIP DE BNMPC</p>
+          </div>
+        </div>
+
+        <div class="z-10 shrink-0 text-center md:text-right">
+          <span class="inline-block bg-yellow-500 text-black font-rm font-black text-sm px-6 py-3 uppercase tracking-wider shadow-lg">1 TITLE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME GROUND (BGB GROUND) & FAN CENTER -->
+    <section id="stadium" class="space-y-6">
+      <div class="flex items-center space-x-3 border-b border-zinc-800 pb-3">
+        <div class="w-2.5 h-7 bg-yellow-500"></div>
+        <h2 class="text-3xl font-black font-rm uppercase tracking-wider text-white">HOME GROUND & ARENA</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-zinc-800 pb-3">
+            <h3 class="text-xl font-rm font-black text-white uppercase">BGB GROUND</h3>
+            <i class="fa-solid fa-building-shield text-yellow-500"></i>
+          </div>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            The official home pitch for Booyah Ballers FC. Known for its intense atmosphere during tournament nights in the Premier Championship De BNMPC.
+          </p>
+          <div class="space-y-2 text-xs font-rm font-bold text-zinc-300">
+            <div class="flex items-center justify-between bg-black p-3 rounded border border-zinc-900">
+              <span class="text-zinc-500 uppercase">LOCATION</span>
+              <span class="uppercase text-white">BGB GROUND</span>
+            </div>
+            <div class="flex items-center justify-between bg-black p-3 rounded border border-zinc-900">
+              <span class="text-zinc-500 uppercase">PITCH TYPE</span>
+              <span class="uppercase text-white">NATURAL GRASS ARENA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram Feed Widget -->
+        <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-zinc-800 pb-3">
+            <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" rel="noopener" class="flex items-center space-x-2 text-white hover:text-yellow-500 transition-colors">
+              <i class="fa-brands fa-instagram text-xl text-yellow-500"></i>
+              <span class="font-rm font-black text-sm uppercase">@boyyah_ballers_2024</span>
+            </a>
+            <span class="text-[10px] font-rm font-bold text-zinc-500 uppercase">OFFICIAL MEDIA</span>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2">
+            <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" class="aspect-square bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group relative">
+              <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=400&q=80" alt="Media" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+            </a>
+            <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" class="aspect-square bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group relative">
+              <img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=400&q=80" alt="Media" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+            </a>
+            <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" class="aspect-square bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group relative">
+              <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=400&q=80" alt="Media" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- OFFICIAL FOOTER -->
+  <footer class="bg-black border-t border-zinc-900 py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-4 text-center space-y-6">
+      <div class="flex justify-center">
+        <img src="input_file_0.png" alt="Booyah Ballers Logo" class="h-20 w-20 object-contain">
+      </div>
+      
+      <div class="space-y-1">
+        <h4 class="text-2xl font-black font-rm tracking-wider uppercase text-white">BOOYAH BALLERS FC</h4>
+        <p class="text-xs font-rm font-bold text-zinc-500 uppercase tracking-widest">ESTABLISHED 2024 • PREMIER CHAMPIONSHIP DE BNMPC</p>
+      </div>
+
+      <div class="flex justify-center items-center space-x-6 text-xs font-rm font-bold text-zinc-400 tracking-wider">
+        <a href="https://instagram.com/boyyah_ballers_2024" target="_blank" class="hover:text-yellow-500 transition-colors uppercase"><i class="fa-brands fa-instagram mr-1"></i> INSTAGRAM</a>
+        <span>•</span>
+        <a href="#hero" class="hover:text-yellow-500 transition-colors uppercase">HOME</a>
+        <span>•</span>
+        <a href="#squad" class="hover:text-yellow-500 transition-colors uppercase">SQUAD</a>
+      </div>
+
+      <p class="text-[11px] text-zinc-600 font-medium pt-4">© 2024–2026 Booyah Ballers FC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- PLAYER MODAL -->
+  <div id="player-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-zinc-950 border border-yellow-500/40 rounded-2xl max-w-sm w-full p-6 text-center relative space-y-4 shadow-2xl gold-border-glow">
+      <button onclick="closePlayerModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="modal-jersey-container" class="w-36 mx-auto pt-2"></div>
+
+      <div>
+        <h3 id="modal-player-name" class="text-3xl font-black font-rm text-white uppercase tracking-tight">PLAYER NAME</h3>
+        <p id="modal-player-role" class="text-xs font-rm font-extrabold text-yellow-500 uppercase tracking-widest pt-1">POSITION</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 pt-2 text-left font-rm">
+        <div class="bg-black p-3 rounded border border-zinc-900">
+          <span class="text-[9px] text-zinc-500 font-bold uppercase block">SHIRT NO.</span>
+          <span id="modal-player-no" class="text-xl font-black text-white">#0</span>
+        </div>
+        <div class="bg-black p-3 rounded border border-zinc-900">
+          <span class="text-[9px] text-zinc-500 font-bold uppercase block">CLUB</span>
+          <span class="text-xs font-black text-white">BOOYAH BALLERS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT ENGINE -->
+  <script>
+    const players = [
+      { name: 'Meraz', number: '1', pos: 'cb', category: 'def' },
+      { name: 'Saifan', number: '2', pos: 'cb', category: 'def' },
+      { name: 'Jubayer', number: '3', pos: 'cb', category: 'def' },
+      { name: 'Evan', number: '4', pos: 'cb', category: 'def' },
+      { name: 'Faiyaz', number: '5', pos: 'cb', category: 'def' },
+      { name: 'Shams', number: '6', pos: 'cb', category: 'def' },
+      { name: 'Tawsif', number: '7', pos: 'rw', category: 'att', captain: true },
+      { name: 'Rian', number: '8', pos: 'cam', category: 'mid' },
+      { name: 'Tazrian', number: '9', pos: 'st', category: 'att' },
+      { name: 'Jabir', number: '10', pos: 'lw', category: 'att' },
+      { name: 'Sameer', number: '11', pos: 'cdm', category: 'mid' },
+      { name: 'Mashnoon', number: '13', pos: 'cb', category: 'def' },
+      { name: 'Ariyan', number: '17', pos: 'lm', category: 'mid' },
+      { name: 'Siyam', number: '24', pos: 'cb', category: 'def' },
+      { name: 'Ifran', number: '29', pos: 'gk', category: 'gk' },
+      { name: 'Junaid', number: '30', pos: 'rm', category: 'mid' }
+    ];
+
+    // Real Madrid Dark Jersey SVG Generator
+    function createJerseySvg(number, name) {
+      return `
+        <svg viewBox="0 0 200 220" class="w-full h-auto drop-shadow-xl">
+          <!-- Main Body -->
+          <path d="M 50 40 L 75 25 L 125 25 L 150 40 L 180 60 L 160 100 L 140 85 L 140 190 L 60 190 L 60 85 L 40 100 L 20 60 Z" fill="#0A0A0C" stroke="#D4AF37" stroke-width="2.5"/>
+          <!-- V-Neck Collar -->
+          <path d="M 75 25 C 85 45 115 45 125 25 L 115 25 C 108 38 92 38 85 25 Z" fill="#D4AF37" />
+          <!-- Sleeve Gold Stripes -->
+          <path d="M 180 60 L 160 100 L 165 103 L 185 63 Z" fill="#D4AF37"/>
+          <path d="M 20 60 L 40 100 L 35 103 L 15 63 Z" fill="#D4AF37"/>
+          <!-- Name -->
+          <text x="100" y="68" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-weight="900" font-size="14" letter-spacing="1.5">${name.toUpperCase()}</text>
+          <!-- Squad Number -->
+          <text x="100" y="152" text-anchor="middle" fill="#D4AF37" font-family="'Montserrat', sans-serif" font-weight="900" font-size="70">${number}</text>
+        </svg>
+      `;
+    }
+
+    const squadGrid = document.getElementById('squad-grid');
+
+    function renderSquad(filter = 'all') {
+      squadGrid.innerHTML = '';
+      const filtered = filter === 'all' ? players : players.filter(p => p.category === filter);
+
+      filtered.forEach(player => {
+        const card = document.createElement('div');
+        card.className = 'rm-player-card rounded-xl p-5 text-center flex flex-col justify-between items-center relative overflow-hidden group';
+        card.setAttribute('onclick', `openPlayerModal('${player.name}')`);
+        
+        const captainTag = player.captain ? 
+          `<span class="absolute top-3 left-3 bg-yellow-500 text-black text-[9px] font-rm font-black px-2 py-0.5 rounded shadow uppercase">CAPTAIN</span>` : '';
+
+        card.innerHTML = `
+          ${captainTag}
+          <div class="w-full px-2 pt-2 jersey-svg-container">
+            ${createJerseySvg(player.number, player.name)}
+          </div>
+          <div class="mt-3 w-full border-t border-zinc-800/80 pt-3">
+            <h4 class="text-xl font-black font-rm text-white uppercase tracking-tight">${player.name}</h4>
+            <p class="text-xs font-rm font-extrabold text-yellow-500 uppercase tracking-widest pt-0.5">${player.pos.toUpperCase()} • #${player.number}</p>
+          </div>
+        `;
+        
+        squadGrid.appendChild(card);
+      });
+    }
+
+    renderSquad();
+
+    // Filter Buttons logic
+    const filterBtns = document.querySelectorAll('.filter-tab');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderSquad(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Match Countdown Timer
+    const targetDate = new Date('December 6, 2026 15:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        document.getElementById('days').innerText = Math.floor(difference / (1000 * 60 * 60 * 24));
+        document.getElementById('hours').innerText = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById('minutes').innerText = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById('seconds').innerText = Math.floor((difference % (1000 * 60)) / 1000);
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Player Modal logic
+    function openPlayerModal(playerName) {
+      const player = players.find(p => p.name === playerName);
+      if (!player) return;
+
+      document.getElementById('modal-jersey-container').innerHTML = createJerseySvg(player.number, player.name);
+      document.getElementById('modal-player-name').innerText = player.name + (player.captain ? ' (C)' : '');
+      document.getElementById('modal-player-role').innerText = player.pos.toUpperCase() + ' • BOOYAH BALLERS FC';
+      document.getElementById('modal-player-no').innerText = '#' + player.number;
+
+      document.getElementById('player-modal').classList.remove('hidden');
+    }
+
+    function closePlayerModal() {
+      document.getElementById('player-modal').classList.add('hidden');
+    }
+
+    // Mobile Drawer logic
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-xmark');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-xmark');
+      });
+    });
+  </script>
+</body>
+</html>
